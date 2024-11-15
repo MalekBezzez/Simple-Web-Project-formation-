@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - E-Learning Website</title>
+    <link rel="stylesheet" href="css/inscription.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/inscription.js"></script>
+
+    <!-- Vous pouvez ajouter des feuilles de style supplémentaires, des scripts, des polices, etc., ici -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>  E-Learning Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Courses</a></li>
+                    <li><a href="main.html">About Us</a></li>
+                    <li><a href="main.html">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="login-container">
+            
+            <div class="image">
+            <img class="image_connexion" src="photo/photo_acceuil.png"></div>
+            <br>
+            <h2>Inscription</h2>
+
+            <form action="#" method="post" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur:</label>
+                    <input type="text" id="username" name="username" required>
+                
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" name="password" required >
+                    <label for="verify-password">Verifier Mot de passe :</label>
+                    <input type="password" id="verify-password" name="password" required >
+                    <p id="password-match-message" style="display: none; color: red;">Les mots de passe ne correspondent pas.</p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="solde">Solde en DT :</label>
+                    <input type="number" id="balance" name="solde " required >
+                    <p id="solde-message" style="display: none; color: red;">Le solde doit être un nombre positif.</p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <button type="submit" class="btn-login">Valider</button>
+                
+                
+                
+            </form>
+        </div>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        
+        <div class="container">
+            <p>&copy; 2023 E-Learning Platform. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

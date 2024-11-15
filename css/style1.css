@@ -1,0 +1,209 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles for the layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+.image_acceuil{
+    width: 300px;
+    height: 300px;
+    position:calc();
+}
+.details{color: #2c3e50;}
+.container {
+    width: 80%;
+    
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #2c3e50; /* Dark blue */
+    color: #fff;
+    padding: 20px 20px;
+    height: 120px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+
+}
+nav ul li a {
+    color: #333; /* Default color for navigation links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav ul li a:hover {
+    color: #27ae60; /* Change color on hover to green */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 0;
+}
+
+#hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+#hero h2 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+
+.container {
+    width: 80%;
+    
+    padding: 20px 0;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; }/* Espacement entre les cartes de cours */
+
+
+.course-card {
+    flex: 0 0 calc(33.33% - 20px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    padding-left: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.course-card:hover {
+    transform: translateY(-15px); /* Effet de levée au survol */
+}
+
+.course-card img {
+    width: 100%;
+    
+    border-radius: 8px;
+}
+
+.course-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.course-card {
+
+    background-color: #fff; /* White background for course cards */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+.course-card:hover{
+    box-shadow: 0px 0px 40px -8px #2c3e50;
+    width: 150%;;
+}
+
+
+.course-card img {
+    /*border:solid 30px;
+    border-color:#2c3e50;*/
+    
+    width: 900px;
+    height: 375px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #34495e; /* Dark blue */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Rest of your existing styles */
+.nav-right {
+    float: right;
+    
+}
+.btn-login {
+    
+    background-color: #27ae60; /* Green button color */
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 10px 10px 10px 10px;
+    
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #219a52;
+    color:#2c3e50   
+                                 /* Darker green on hover */
+}
+
+/* Additional styling for login modal or form can be added here */
+

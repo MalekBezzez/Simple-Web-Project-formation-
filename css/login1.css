@@ -1,0 +1,63 @@
+/* Styles spécifiques pour la page de connexion */
+
+/* Body et header */
+
+/* Formulaire de connexion */
+.login-container {
+    width: 35%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.image_connexion{width: 100px; ;
+    height: px;
+
+}
+.image{display: flex;
+justify-content:center;}
+
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button.btn-login {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-login:hover {
+    background-color: #219a52;
+}
+footer {
+    background-color: #34495e; /* Dark blue */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

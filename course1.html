@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - E-Learning Website</title>
+    <link rel="stylesheet" href="css/course1.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="course1.js"></script>
+
+    <!-- Vous pouvez ajouter des feuilles de style supplémentaires, des scripts, des polices, etc., ici -->
+</head>
+
+<body>
+    <script>
+        function malek() {
+        window.location.href = "./main.html";
+    }
+    </script>
+    <header>
+        <div class="container">
+            <h1> E-Learning Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Courses</a></li>
+                    <li><a href="main.html">About Us</a></li>
+                    <li><a href="main.html">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="login-container">
+
+            <div class="image">
+                <img class="image_connexion" src="photo/certif1.jpg">
+            </div>
+            <br>
+            <h2>Cisco certified network</h2> <br>
+            <h3>Déscription : </h3> <br>
+            <p>L’entreprise Cisco possède différentes certifications dans le domaine de l’IT. Leurs certifications
+                abordent des spécificités différentes :
+
+
+            <ul>
+                <li>Sécurité </li>
+                <li>Routage et commutation </li>
+                <li> Conception</li>
+                <li>Réseau industriel </li>
+                <li> Fournisseur de services </li>
+                <li>Opérations de fournisseur de services</li>
+                <li>Réseau de stockage </li>
+
+                <li>Centre de données.</li>
+            </ul>
+
+            Ces certificats disposent de différents niveaux afin d’être disponible pour trois cibles différentes qui
+            sont les étudiants, les développeurs et les ingénieurs.</p>
+            <br>
+            <div class="cercles">
+                <div class="circle duration">
+                    <h3>Durée : </h3>
+                    <h2>4-6 mois</h2>
+                </div>
+                <div class="circle price">
+                    <h3>Prix : </h3>
+                    <h1>250 DT</h1>
+                </div>
+            </div>
+            <br>
+            <br>
+            <h2>Inscription</h2>
+
+            <form action="#" method="post" id="form">
+                <div class="form-group">
+                    <label for="date-debut">Date debut:</label>
+                    <input type="date" id="date-debut" name="date-debut" required>
+
+                    <label for="date-fin">Date fin :</label>
+                    <input type="date" id="date-fin" name="date-fin" required>
+                    <label for="langue"> Langue :</label>
+                    <select id="langue">
+                        <option> Francais</option>
+                        <option>Anglais</option>
+                    </select>
+
+                    <label for="formateur">Formateur</label>
+                    <select id="formateur" required>
+                        <option>Bassem Chouchane</option>
+                        <option> Khaled Chebli</option>
+                    </select>
+                    <h3>Sélectionnez le type de formation :</h3>
+                    <div class="radio-group">
+                        <label class="radio-container">En ligne
+                            <input type="radio" id="online" name="formation-type" value="en_ligne" required>
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="radio-container">Présentiel
+                            <input type="radio" id="offline" name="formation-type" value="presentiel" required>
+                            <span class="radio-checkmark"></span>
+                        </label>
+                    </div>
+
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <button type="submit" class="btn-login">Valider</button>
+
+
+
+            </form>
+            <div id="errorModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+        </div>
+        <div id="recapModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Récapitulatif du formulaire</h2>
+                <div id="recapContent"></div>
+                <button id="confirm">Valider l'envoi</button>
+            </div>
+        </div>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+
+        <div class="container">
+            <p>&copy; 2023 E-Learning Platform. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    //fonction pour prendre la date-debut
+    // Récupère la date actuelle
+    let currentDate = new Date();
+
+    // Ajoute 14 jours à la date actuelle
+    currentDate.setDate(currentDate.getDate() + 14);
+
+    // Formatte la date en 'yyyy-mm-dd' pour le champ de date HTML
+    let year = currentDate.getFullYear();
+    let month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+    let day = ('0' + currentDate.getDate()).slice(-2);
+
+    // Place la date calculée dans le champ de date par défaut
+    document.getElementById('date-debut').value = `${year}-${month}-${day}`;
+
+    //fonction pour la date-fin 
+    function calculateEndDate() {
+        let startDate = new Date(document.getElementById('date-debut').value);
+
+
+        let endDate = new Date(startDate); // Copie la date de début
+        endDate.setMonth(endDate.getMonth() + 4); // Ajoute 4 mois à la date de fin
+
+        // Formatte la date en 'yyyy-mm-dd' pour le champ de date HTML
+        let year = endDate.getFullYear();
+        let month = ('0' + (endDate.getMonth() + 1)).slice(-2);
+        let day = ('0' + endDate.getDate()).slice(-2);
+
+        // Place la date calculée dans le champ de date de fin
+        document.getElementById('date-fin').value = `${year}-${month}-${day}`;
+
+    }
+
+    // Ajoute un événement au changement de la date de début pour recalculer la date de fin
+    document.getElementById('date-debut').addEventListener('change', calculateEndDate());
+
+
+
+
+</script>
+
+<script>
+    // test de validation formulaire
+
+
+
+    document.getElementById('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        let startDateInput = document.getElementById('date-debut');
+        let endDateInput = document.getElementById('date-fin');
+        let langueInput = document.getElementById('langue');
+        let formateurInput = document.getElementById('formateur');
+        let formationTypeInputs = document.getElementsByName('formation-type');
+
+        let startDate = startDateInput.value;
+        let endDate = endDateInput.value;
+        let langue = langueInput.value;
+        let formateur = formateurInput.value;
+        let formationType = '';
+
+        // Determine which formation type is selected
+        for (let i = 0; i < formationTypeInputs.length; i++) {
+            if (formationTypeInputs[i].checked) {
+                formationType = formationTypeInputs[i].value;
+                break;
+            }
+        }
+
+        let currentDate = new Date();
+        let minStartDate = new Date(currentDate.setDate(currentDate.getDate() + 14));
+        let maxEndDate = new Date(startDate);
+        maxEndDate.setMonth(maxEndDate.getMonth() + 4);
+
+        if (Date.parse(startDate) < Date.parse(minStartDate)) {
+            displayError('La date de début doit être au moins 14 jours après la date actuelle.');
+        } else if (Date.parse(endDate) < Date.parse(maxEndDate)) {
+            displayError('La date de fin doit être au moins 4 mois après la date de début.');
+        } else {
+            // Create a table to display the form data
+            let table = '<table  class="table-recap" >' +
+                '<tr><th>nom certif </th><th>Cisco certified network</th></tr>' +
+                `<tr><td>Date début</td><td>${startDate}</td></tr>` +
+                `<tr><td>Date fin</td><td>${endDate}</td></tr>` +
+                `<tr><td>Langue</td><td>${langue}</td></tr>` +
+                `<tr><td>Formateur</td><td>${formateur}</td></tr>` +
+                `<tr><td>Formation Type</td><td>${formationType}</td></tr>` +
+                '</table><br><br><button class="btn-confirmer" onclick="malek()">Confirmer</button>';
+                
+            mallouk(table);
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+    // Si les conditions sont respectées, vous pouvez soumettre le formulaire ici
+
+
+
+
+    function displayError(message) {
+        document.getElementById('errorMessage').textContent = message;
+        document.getElementById('errorModal').style.display = 'block';
+    }
+
+    document.getElementsByClassName('close')[0].addEventListener('click', function () {
+        document.getElementById('errorModal').style.display = 'none';
+    });
+
+    function mallouk(message) {
+        document.getElementById('errorMessage').innerHTML = message;
+        document.getElementById('errorModal').style.display = 'block';
+    }
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>
